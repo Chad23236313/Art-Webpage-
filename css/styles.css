@@ -1,0 +1,184 @@
+/*Hambuger Menu*/
+
+#menu_toggle {
+  opacity: 0;
+}
+
+#menu_toggle:checked ~ .menu_btn > span {
+  transform: rotate(45deg);
+}
+#menu_toggle:checked ~ .menu_btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu_toggle:checked ~ .menu_btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu_toggle:checked ~ .menu_box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu_btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #616161;
+
+  transition-duration: .25s;
+}
+.menu_btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu_btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu_box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu_item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu_item:hover {
+  background-color: #CFD8DC;
+}
+
+/*Nav Bar*/
+/* Style for nav specifies text properties */
+nav {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style specific padding and margins for unordered list */
+nav ul {
+  padding: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Style for nav li specifies the background color, rounded corners, removes bullet style, and applies margins and padding for list items within the navigation */ 
+nav li {
+  border-radius: 1em;
+  list-style-type: none; 
+  margin: 0.3em; padding: 0.4em;
+}
+
+/* Style changes navigation link text color to white and remove the underline */
+nav li a {
+  text-decoration: none;
+}
+
+
+/*Header*/
+
+.header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Display*/
+.display {
+  margin: 0;
+  border: 0;
+}
+
+.Bar1, .Bar4 {
+  width: 2.5%;
+  background-color: #000000;
+}
+
+.Bar2, .Bar3 {
+  width: 2.5%;
+  background-color: #FF0000;
+}
+
+.Bar3, .Bar4 {
+  right: 0;
+}
+
+.BarMid {
+  width: 1%;
+}
+
+.content {
+  width: 45%;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  background-color: #ffffff;
+}
+table {
+  margin: 0;
+  border: 0;
+  border-spacing: 0;
+}
+
+td {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
